@@ -103,6 +103,7 @@ jobs:
         run: |
           sudo apt-get install -y moreutils zip
           sudo apt-get install jq
+          chmod +x jq
           yarn global add spritesheet-js
           sudo apt-get install -y imagemagick
           pip install Pillow
