@@ -1,8 +1,5 @@
 name: Conversion Request
 on:
-  push:
-    branches:
-      - main
   issues:
     types:
       - labeled
@@ -101,10 +98,8 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: |
-          sudo apt update
           sudo apt-get install -y moreutils zip
-          wget -O /usr/local/bin/jq https://github.com/stedolan/jq/releases/latest/download/jq-linux64
-          chmod +x /usr/local/bin/jq
+          sudo apt-get install jq
           yarn global add spritesheet-js
           sudo apt-get install -y imagemagick
           pip install Pillow
