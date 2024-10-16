@@ -102,7 +102,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get install -y moreutils zip
-          sudo apt-get install jq
+          wget -O /usr/local/bin/jq https://github.com/stedolan/jq/releases/latest/download/jq-linux64
           chmod +x /usr/local/bin/jq
           yarn global add spritesheet-js
           sudo apt-get install -y imagemagick
